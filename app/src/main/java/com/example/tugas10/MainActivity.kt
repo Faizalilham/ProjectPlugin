@@ -35,6 +35,7 @@ class MainActivity : AppCompatActivity() {
         adapter = adapernotes(mutableListOf(), object : adapernotes.clickAdaper{
             override fun onClick(user: realm) {
                 startActivity(Intent(this@MainActivity, MainActivity4::class.java)
+                        .putExtra("id",user.getid())
                     .putExtra("kata", user.getInput())
                     .putExtra("kata2", user.getInputt())
                 )

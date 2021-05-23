@@ -26,5 +26,15 @@
       <option name="name" value="maven" />
       <option name="url" value="https://jitpack.io" />
     </remote-repository>
+    <remote-repository>
+      <option name="id" value="maven" />
+      <option name="name" value="maven" />
+      <option name="url" value="file:$PROJECT_DIR$/http/oss.jfrog.org/artifactory/0ss-snapshot-local" />
+    </remote-repository>
+    <remote-repository>
+      <option name="id" value="maven" />
+      <option name="name" value="maven" />
+      <option name="url" value="file:$PROJECT_DIR$/app/http/oss.jfrog.org/artifactory/0ss-snapshot-local" />
+    </remote-repository>
   </component>
 </project>

@@ -4,8 +4,12 @@ buildscript {
     repositories {
         google()
         jcenter()
+        maven{
+            url 'http/oss.jfrog.org/artifactory/0ss-snapshot-local'
+        }
     }
     dependencies {
+        classpath "io.realm:realm-gradle-plugin:7.0.0-beta "
         classpath "com.android.tools.build:gradle:4.1.1"
         classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
         classpath "io.realm:realm-gradle-plugin:10.2.0"
@@ -19,7 +23,9 @@ allprojects {
     repositories {
         google()
         jcenter()
-        maven{url "https://jitpack.io"}
+        maven{
+            url 'http/oss.jfrog.org/artifactory/0ss-snapshot-local'
+        }
     }
 }
 

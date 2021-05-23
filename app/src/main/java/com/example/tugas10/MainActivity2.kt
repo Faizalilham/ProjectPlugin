@@ -19,9 +19,6 @@ class MainActivity2 : AppCompatActivity() {
         View()
         addnotes()
         back()
-
-
-
         }
 
 
@@ -33,7 +30,10 @@ class MainActivity2 : AppCompatActivity() {
         button5.setOnClickListener {
             realm1.beginTransaction()
             try {
+                val curend = realm1.where(realm::class.java).max("id")
+                val nextid = if ( curend== null) 1 else curend.toInt()+1
                 val dataa = realm1.createObject(realm::class.java)
+                dataa.setid(nextid)
                 dataa.setInputt(text2.text.toString())
                 dataa.setInput(text3.text.toString())
                 realm1.commitTransaction()
